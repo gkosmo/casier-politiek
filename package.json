@@ -18,6 +18,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
     "@thoughtbot/superglue": "^1.0.3",
+    "d3": "^7.9.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-redux": "^9.2.0"
