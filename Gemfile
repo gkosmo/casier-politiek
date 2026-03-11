@@ -41,6 +41,7 @@ gem "bootsnap", require: false
 # Admin interface
 gem 'activeadmin'
 gem 'devise'
+gem 'sassc' # Required for ActiveAdmin styles
 
 # Background jobs
 gem 'sidekiq'
