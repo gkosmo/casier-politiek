@@ -54,3 +54,5 @@ coverage/
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/credentials/*.key
+
+/node_modules
