@@ -9,4 +9,8 @@ class Politician < ApplicationRecord
     federal_mp: 'federal_mp',
     mep: 'mep'
   }
+
+  def convictions_count
+    convictions.count
+  end
 end
