@@ -5,8 +5,13 @@ import { Application } from '@thoughtbot/superglue'
 import { configureStore } from '@reduxjs/toolkit'
 import { rootReducer } from '@thoughtbot/superglue'
 
-// Import your pages - will be populated in next task
-const pages = {}
+// Import your pages
+import Home from './components/Home'
+
+const pages = {
+  '/pages/home': Home,
+  '/': Home
+}
 
 // Create Redux store
 const store = configureStore({
