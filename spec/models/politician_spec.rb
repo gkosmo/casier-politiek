@@ -8,8 +8,7 @@ RSpec.describe Politician, type: :model do
   end
 
   describe 'associations' do
-    # Skipping this test as Conviction model will be created in Task 5
-    # it { should have_many(:convictions).dependent(:destroy) }
+    it { should have_many(:convictions).dependent(:destroy) }
   end
 
   describe 'enums' do

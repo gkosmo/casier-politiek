@@ -10,9 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2026_03_11_093659) do
+ActiveRecord::Schema[7.2].define(version: 2026_03_11_094410) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "convictions", force: :cascade do |t|
+    t.bigint "politician_id", null: false
+    t.date "conviction_date", null: false
+    t.string "offense_type", null: false
+    t.string "sentence_prison"
+    t.decimal "sentence_fine", precision: 10, scale: 2
+    t.string "sentence_ineligibility"
+    t.string "appeal_status", null: false
+    t.text "description"
+    t.string "source_url", null: false
+    t.boolean "verified", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["appeal_status"], name: "index_convictions_on_appeal_status"
+    t.index ["conviction_date"], name: "index_convictions_on_conviction_date"
+    t.index ["offense_type"], name: "index_convictions_on_offense_type"
+    t.index ["politician_id"], name: "index_convictions_on_politician_id"
+  end
 
   create_table "politicians", force: :cascade do |t|
     t.string "name", null: false
@@ -28,4 +47,6 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_11_093659) do
     t.index ["party"], name: "index_politicians_on_party"
     t.index ["position"], name: "index_politicians_on_position"
   end
+
+  add_foreign_key "convictions", "politicians"
 end
