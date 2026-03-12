@@ -2,7 +2,8 @@ class InitialScraperJob < ApplicationJob
   queue_as :scraping
 
   BELGIAN_MP_LIST_URL = 'https://en.wikipedia.org/wiki/List_of_members_of_the_Federal_Parliament_of_Belgium'
-  BELGIAN_MEP_LIST_URL = 'https://en.wikipedia.org/wiki/List_of_members_of_the_European_Parliament_for_Belgium,_2019–2024'
+  # Use regular hyphen instead of en-dash for URL encoding
+  BELGIAN_MEP_LIST_URL = 'https://en.wikipedia.org/wiki/List_of_members_of_the_European_Parliament_for_Belgium,_2019-2024'
 
   def perform
     scraper = WikipediaScraper.new

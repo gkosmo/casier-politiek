@@ -18,9 +18,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class="h-screen overflow-hidden">
+    <%= yield %>
   </body>
 </html>
