@@ -59,7 +59,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
 
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1">
         {/* Sidebar - hidden on mobile, shown on desktop */}
         <div className="hidden lg:block lg:w-80 border-r border-gray-200 bg-white overflow-y-auto">
           <FilterSidebar
