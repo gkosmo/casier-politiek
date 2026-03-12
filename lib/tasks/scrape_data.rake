@@ -47,6 +47,7 @@ namespace :scraper do
         politician.wikipedia_url = pol_data[:wikipedia_url]
         politician.active = true
         politician.position = 'federal_mp'  # default
+        politician.party = 'Unknown'  # Will be updated via admin panel
         politician.save!
         created_count += 1
         print "+"
