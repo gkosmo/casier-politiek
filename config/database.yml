@@ -59,6 +59,4 @@ test:
 #
 production:
   <<: *default
-  database: casier_pol_be_production
-  username: casier_pol_be
-  password: <%= ENV["CASIER_POL_BE_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
